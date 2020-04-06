@@ -1,0 +1,25 @@
+{
+  "name": "static-site",
+  "version": "1.0.0",
+  "description": "A command-line application that dynamically generates a README.md from a user's input.",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "fs": "^0.0.1-security",
+    "inquirer": "^7.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaivey22/read-o-matic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaivey22/read-o-matic/issues"
+  },
+  "homepage": "https://github.com/aaivey22/read-o-matic#readme"
+}
