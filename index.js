@@ -48,12 +48,17 @@ const questions = [
       //     message: "Tests?",
       //     name: "test"
       //   },
-]
+];
 
 inquirer
   .prompt(questions)
-  .then(function(response) {
+  .then(function writeToFile(fileName, data) {
 
+    function init() {
+
+    }
+    
+    init();
 //     if (response.confirm === response.password) {
 //       console.log("Hello " + response.username);
 //       console.log("Success!");
