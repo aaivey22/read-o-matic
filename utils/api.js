@@ -6,20 +6,20 @@ const inquirer = require("inquirer");
 const api = {
   getUser(username) {
 
-    const queryUrl = `https://api.github.com/users/${username}/repos?per_page=100`;
+    const queryUrl = `https://api.github.com/users/${username}`;
 
     axios.get(queryUrl).then(function (res) {
-      console.log("response",res.data)
-      const profileImage = res.data.map(function (repo) {
-        return repo.name;
-      });
-      const repoNamesStr = repoNames.join("\n");
+      console.log("response", res.data.name)
+      const ghName = res.data.name;
 
-        console.log(`Saved ${repoNames.length} repos`);
-      });
-      // use axios to get ghub api data
-      // remember to catch for errors
-      console.log(data)
+      // const repoNamesStr = repoNames.join("\n");
+
+      //   console.log(`Saved ${repoNames.length} repos`);
+      // });
+      // // use axios to get ghub api data
+      // // remember to catch for errors
+      // console.log(data)
+    });
   }
 };
 

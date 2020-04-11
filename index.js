@@ -1,7 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require('fs');
 const axios = require("axios");
-const api = require("./utils/api")
+const api = require("./utils/api");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 const questions = [
   {
@@ -46,24 +47,30 @@ function writeToFile(fileName, data) {
 
     if (err) {
       return console.log(err);
-    }
-  
-    console.log("Success!");
-  
-  });
+    }else {
+
+    console.log("Success!")}
+
+  })
 }
 
-function init() {
+function start() {
   inquirer
-    .prompt(questions)
-    .then(res => {
-      api.getUser(res.username)
-        .then(api => {
+    //prompt is a method within inquirer. Passes questions as a paramter
+    .prompt(questions) 
+    // inquirer automatically creates an obj with the response data
+    .then(answers => { 
+      api.getUser(answers.username)
+        .then(data => {
           console.log(api)
           // writeToFile to generate readMe
-        })
+          writeToFile("README.md", generateMarkdown(...answers, ...data));
+        });
+    })
+    .catch(error => {
+      console.log(err)
     });
-}
+};
 
-init();
-// 
+
+start();
