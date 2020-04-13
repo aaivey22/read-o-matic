@@ -1,55 +1,20 @@
 const fs = require("fs");
 const axios = require("axios");
 const inquirer = require("inquirer");
-
+//require("dotenv").config();
+  //node.js process library
 
 const api = {
   getUser(username) {
 
     const queryUrl = `https://api.github.com/users/${username}`;
+    //?client_id=${process.env.CLIENT_ID}&client_secret=${process.env.CLIENT_SECRET}`
+      //CLIENT_ID= needs to be in env file in utils
+      //CLIENT_SECRET= needs to be in env file in utils
 
-    axios.get(queryUrl).then(function (res) {
-      console.log("response", res.data.name)
-      const ghName = res.data.name;
-
-      // const repoNamesStr = repoNames.join("\n");
-
-      //   console.log(`Saved ${repoNames.length} repos`);
-      // });
-      // // use axios to get ghub api data
-      // // remember to catch for errors
-      // console.log(data)
-    });
+    return axios.get(queryUrl)
   }
 };
 
   module.exports = api;
 
-// const fs = require("fs");
-// const axios = require("axios");
-// const inquirer = require("inquirer");
-
-// inquirer
-//   // .prompt({
-//   //   message: "Enter your GitHub username:",
-//   //   name: "username"
-//   // })
-//   .then(function({ username }) {
-//     const queryUrl = `https://api.github.com/users/${username}/repos?per_page=100`;
-
-//     axios.get(queryUrl).then(function(res) {
-//       const repoNames = res.data.map(function(repo) {
-//         return repo.name;
-//       });
-
-//       const repoNamesStr = repoNames.join("\n");
-
-//       fs.writeFile("repos.txt", repoNamesStr, function(err) {
-//         if (err) {
-//           throw err;
-//         }
-
-//         console.log(`Saved ${repoNames.length} repos`);
-//       });
-//     });
-//   });

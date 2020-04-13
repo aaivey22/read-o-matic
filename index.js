@@ -1,6 +1,5 @@
 const inquirer = require("inquirer");
 const fs = require('fs');
-const axios = require("axios");
 const api = require("./utils/api");
 const generateMarkdown = require("./utils/generateMarkdown");
 
@@ -30,47 +29,66 @@ const questions = [
     message: "What is the command for installation?",
     name: "installation"
   },
-  {
-    type: "input",
-    message: "How is this project licensed?",
-    name: "license"
-  },
+  // {
+  //   type: "list",
+  //   message: "How is this project licensed?",
+  //   name: "license"
+  //   choices: ["MIT", "none"]
+
+  // },
   {
     type: "input",
     message: "What is your email?",
     name: "email"
+  },
+  {
+    type: "input",
+    message: "What tools were used on this project?",
+    name: "tools"
+  },
+  {
+    type: "input",
+    message: "Is the code functioning as expected?",
+    name: "badge"
   }
 ];
 
-function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, err => {
-
+function writeToFile(fileName, dataCopy) {
+  // writing the readme file
+  return fs.writeFile(fileName, dataCopy, err => {
     if (err) {
-      return console.log(err);
-    }else {
-
-    console.log("Success!")}
-
+      console.log(err)
+    } else {
+      console.log("readme generating");
+    }
   })
 }
 
 function start() {
   inquirer
     //prompt is a method within inquirer. Passes questions as a paramter
-    .prompt(questions) 
+    .prompt(questions)
     // inquirer automatically creates an obj with the response data
-    .then(answers => { 
-      api.getUser(answers.username)
-        .then(data => {
-          console.log(api)
+    .then(answers => {
+      api
+        .getUser(answers.username)
+        .then(response => {
+          console.log(response.data)
           // writeToFile to generate readMe
-          writeToFile("README.md", generateMarkdown(...answers, ...data));
-        });
+          // ... is a spread operator
+          writeToFile("README.md", generateMarkdown(response.data, answers))
+        })
     })
+    //catch not working properly
     .catch(error => {
-      console.log(err)
-    });
+      console.log(error.message)
+    })
 };
 
-
 start();
+
+//App ID: 60671
+
+// Client ID: Iv1.3980dc00d16d5e37
+
+// Client secret: 79cc94dd2bda074860854fc7b0e678f735e5b324
