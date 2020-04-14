@@ -1,22 +1,22 @@
 
-<img src=https://avatars1.githubusercontent.com/u/58960456?v=4>
-# Angela Ivey
-# aaivey22
-# h
+# <img src="https://avatars1.githubusercontent.com/u/58960456?v=4" /> # Angela Ivey
 
-# undefined
-h
+# aaivey22
+# yahoo.com
+
+# read-o-matic
+readme generator
 
 ## Tools Used
-h
+abc
 
 ## Features
 
 ## Snapshot
-undefined
+this.com
 
 ## Installation Command
-h
+nmp i
 
 ## Table of Contents
 * [Installation](#installation) 
@@ -24,7 +24,7 @@ h
 * [Collaborators](#collaborators)
 
 ```
-h
+nmp i
 ```
 
 *@ University of Richmond Coding Bootcamp 2020, Richmond, VA.*

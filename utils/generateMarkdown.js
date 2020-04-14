@@ -1,25 +1,27 @@
 
 // data is a peramiter of generateMarkdown
-function generateMarkdown(data, answers) {
-  return `
-<img src=${data.avatar_url}>
-# ${data.name}
-# ${data.login}
-# ${answers.email}
+function generateMarkdown(data) {
+  console.log(data);
 
-# ${answers.title}
-${answers.description}
+  return `
+# <img src="${data.data.avatar_url}" /> # ${data.data.name}
+
+# ${data.data.login}
+# ${data.email}
+
+# ${data.title}
+${data.description}
 
 ## Tools Used
-${answers.tools}
+${data.tools}
 
 ## Features
 
 ## Snapshot
-${answers.imageSource}
+${data.imageSource}
 
 ## Installation Command
-${answers.installation}
+${data.installation}
 
 ## Table of Contents
 * [Installation](#installation) 
@@ -27,7 +29,7 @@ ${answers.installation}
 * [Collaborators](#collaborators)
 
 \`\`\`
-${answers.installation}
+${data.installation}
 \`\`\`
 
 *@ University of Richmond Coding Bootcamp 2020, Richmond, VA.*

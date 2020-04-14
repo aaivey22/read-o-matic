@@ -55,9 +55,9 @@ const questions = [
 
 function writeToFile(fileName, dataCopy) {
   // writing the readme file
-  return fs.writeFile(fileName, dataCopy, err => {
-    if (err) {
-      console.log(err)
+  return fs.writeFile(fileName, dataCopy, error => {
+    if (error) {
+      console.log(error)
     } else {
       console.log("readme generating");
     }
@@ -76,13 +76,15 @@ function start() {
           console.log(response.data)
           // writeToFile to generate readMe
           // ... is a spread operator
-          writeToFile("README.md", generateMarkdown(response.data, answers))
-        })
+          writeToFile("README.md", generateMarkdown({ ...answers, ...response }))
+        }).catch(error => {
+          console.log(error)
+        });
     })
     //catch not working properly
     .catch(error => {
-      console.log(error.message)
-    })
+      console.log(error)
+    });
 };
 
 start();
