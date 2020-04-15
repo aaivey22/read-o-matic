@@ -4,33 +4,54 @@ function generateMarkdown(data) {
   console.log(data);
 
   return `
-# <img src="${data.data.avatar_url}" /> # ${data.data.name}
+## <img src="${data.data.avatar_url}" alt="avatar" style="border-radius: 16px" width="30" />  ${data.data.login}
 
-# ${data.data.login}
-# ${data.email}
+# <h1 align="center"> ${data.title} </h1>
+<h3 align="center"> ${data.description} </h3>
 
-# ${data.title}
-${data.description}
+## Snapshot
+<img src="${data.imageSource}" alt="${data.title} image" />
+
+<br/>
+<br/>
+
+## Table of Contents
+* [Features](#features)
+* [Tools](#tools)
+* [Installation](#installation) 
+* [Collaborators](#collaborators)
+* [Contact](#name)
+* [License](#license)
+
+<br/>
+<br/>
+
+## Features
+
+<br/>
+<br/>
 
 ## Tools Used
 ${data.tools}
 
-## Features
+<br/>
+<br/>
 
-## Snapshot
-${data.imageSource}
-
-## Installation Command
-${data.installation}
-
-## Table of Contents
-* [Installation](#installation) 
-* [License](#license)
-* [Collaborators](#collaborators)
+## Installation
+### To install ${data.title} folow these steps:
 
 \`\`\`
 ${data.installation}
 \`\`\`
+
+<br/>
+<br/>
+
+***
+## Contact
+### ${data.data.name}
+### ${data.email}
+***
 
 *@ University of Richmond Coding Bootcamp 2020, Richmond, VA.*
 `;

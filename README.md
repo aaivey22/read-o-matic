@@ -1,30 +1,51 @@
 
-# <img src="https://avatars1.githubusercontent.com/u/58960456?v=4" /> # Angela Ivey
+## <img src="https://avatars1.githubusercontent.com/u/58960456?v=4" alt="avatar" style="border-radius: 16px" width="30" />  aaivey22
 
-# aaivey22
-# yahoo.com
+# <h1 align="center"> read-o-matic </h1>
+<h3 align="center"> it generates readmes </h3>
 
-# read-o-matic
-readme generator
+## Snapshot
+<img src="piclinkhere" alt="read-o-matic image" />
 
-## Tools Used
-abc
+<br/>
+<br/>
+
+## Table of Contents
+* [Features](#features)
+* [Tools](#tools)
+* [Installation](#installation) 
+* [Collaborators](#collaborators)
+* [Contact](#name)
+* [License](#license)
+
+<br/>
+<br/>
 
 ## Features
 
-## Snapshot
-this.com
+<br/>
+<br/>
 
-## Installation Command
-nmp i
+## Tools Used
+this and that
 
-## Table of Contents
-* [Installation](#installation) 
-* [License](#license)
-* [Collaborators](#collaborators)
+<br/>
+<br/>
+
+## Installation
+### To install read-o-matic folow these steps:
 
 ```
-nmp i
+npm i
 ```
+
+<br/>
+<br/>
+
+***
+## Contact
+### Angela Ivey
+### me@email.com
+***
 
 *@ University of Richmond Coding Bootcamp 2020, Richmond, VA.*
