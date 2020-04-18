@@ -29,13 +29,13 @@ const questions = [
     message: "What is the command for installation?",
     name: "installation"
   },
-  // {
-  //   type: "list",
-  //   message: "How is this project licensed?",
-  //   name: "license"
-  //   choices: ["MIT", "none"]
+  {
+    type: "list",
+    message: "Would you like a date-stamp badge?",
+    choices: ["Yes", "No"],
+    name: "badge"
+  },
 
-  // },
   {
     type: "input",
     message: "What is your email?",
@@ -48,8 +48,8 @@ const questions = [
   },
   {
     type: "input",
-    message: "Is the code functioning as expected?",
-    name: "badge"
+    message: "What is the link to your gif?",
+    name: "gif"
   }
 ];
 
@@ -75,7 +75,10 @@ function start() {
         .then(response => {
           console.log(response.data)
           // writeToFile to generate readMe
-          // ... is a spread operator
+          //conditional (ternary) operator
+          console.log(Date.now())
+          answers.badge = answers.badge === "Yes" ? `![Relative date](https://img.shields.io/date/${Date.now()})` : null;
+          // ... is a spread operator   
           writeToFile("README.md", generateMarkdown({ ...answers, ...response }))
         }).catch(error => {
           console.log(error)
@@ -86,6 +89,8 @@ function start() {
       console.log(error)
     });
 };
+
+
 
 start();
 

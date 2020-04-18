@@ -11,16 +11,18 @@ function generateMarkdown(data) {
 
 ## Snapshot
 <img src="${data.imageSource}" alt="${data.title} image" />
+<img src="${data.gif}" alt="${data.title} image" />
 
 <br/>
 <br/>
 
 ## Table of Contents
+${data.badge}
 * [Features](#features)
 * [Tools](#tools)
 * [Installation](#installation) 
 * [Collaborators](#collaborators)
-* [Contact](#name)
+* [Contact](#data.data.name)
 * [License](#license)
 
 <br/>
