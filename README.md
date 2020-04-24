@@ -1,40 +1,47 @@
 
-## <img src="https://avatars1.githubusercontent.com/u/58960456?v=4" alt="avatar" style="border-radius: 16px" width="30" />  aaivey22
+## <img src="https://avatars1.githubusercontent.com/u/58960456?v=4" alt="avatar" style="border-radius: 50px" width="75" />  aaivey22
 
-# <h1 align="center"> title </h1>
-<h3 align="center"> descr </h3>
+# <h1 align="center"> READ-O-MATIC </h1>
+<h3 align="center"> The Read-O-Matic is a dynamic application that easily and quickly generates a README.md file for developers. When invoked the application will prompt the developer with a series of questions regarding their current project and in turn use that information to generate a beautifully crafted README.md! </h3>
 
-## Snapshot
-<img src="link to pic" alt="title image" />
+---
 
 <br/>
-<br/>
-[Relative date](https://img.shields.io/date/1587167966476)
+
 
 ## Table of Contents
-* [Features](#features)
-* [Tools](#tools)
+![Relative date](https://img.shields.io/date/1587708833848)
+* [Technologies](#technologies)
 * [Installation](#installation) 
-* [Collaborators](#collaborators)
-* [Contact](#data.data.name)
+* [Collaborators](#contact)
+* [Contact](#contact)
 * [License](#license)
 
 <br/>
+
+---
+
+## Snapshot
+<img src="read_screenshot1.png" alt="READ-O-MATIC" style="border-radius: 20px" />
+
+<br/>
 <br/>
 
-## Features
+<img src="read-gif.gif" alt="READ-O-MATIC" style="border-radius: 20px" />
 
 <br/>
 <br/>
 
-## Tools Used
-tooldd
+---
+
+## Technologies
+JS ES6, Node.js
 
 <br/>
 <br/>
 
 ## Installation
-### To install title folow these steps:
+### To install READ-O-MATIC folow these steps:
 
 ```
 npm i
@@ -45,8 +52,10 @@ npm i
 
 ***
 ## Contact
+### 
+## <img src="https://avatars1.githubusercontent.com/u/58960456?v=4" alt="avatar" style="border-radius: 20px" width="30" />  aaivey22
 ### Angela Ivey
-### emailsss
+### aaivey22@yahoo.com
 ***
 
 *@ University of Richmond Coding Bootcamp 2020, Richmond, VA.*

@@ -11,18 +11,35 @@ const questions = [
   },
   {
     type: "input",
+    message: "List the github usernames of all collaborators:",
+    name: "collaborators"
+  },
+  {
+    type: "input",
     message: "What is the project title?",
     name: "title"
   },
   {
     type: "input",
-    message: "Give a brief description of this project.",
+    message: "Give a brief 3-sentence description of this project:",
     name: "description"
+  },
+  // {
+  //   type: 'list',
+  //   message: "This is a bulleted list of features. List your application features and separate them with a single comma: ",
+  //   initial: '',
+  //   separator: ',',
+  //   name: 'features'
+  // },
+  {
+    type: "input",
+    message: "What is the screenshot link?",
+    name: "imageSource"
   },
   {
     type: "input",
-    message: "What is the link to the screenshot?",
-    name: "imageSource"
+    message: "What is the gif link ?",
+    name: "gif"
   },
   {
     type: "input",
@@ -35,7 +52,6 @@ const questions = [
     choices: ["Yes", "No"],
     name: "badge"
   },
-
   {
     type: "input",
     message: "What is your email?",
@@ -43,13 +59,8 @@ const questions = [
   },
   {
     type: "input",
-    message: "What tools were used on this project?",
-    name: "tools"
-  },
-  {
-    type: "input",
-    message: "What is the link to your gif?",
-    name: "gif"
+    message: "What technologies or tools were used on this project?",
+    name: "technologies"
   }
 ];
 

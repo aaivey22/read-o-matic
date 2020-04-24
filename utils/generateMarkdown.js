@@ -4,37 +4,42 @@ function generateMarkdown(data) {
   console.log(data);
 
   return `
-## <img src="${data.data.avatar_url}" alt="avatar" style="border-radius: 16px" width="30" />  ${data.data.login}
+## <img src="${data.data.avatar_url}" alt="avatar" style="border-radius: 50px" width="75" />  ${data.data.login}
 
 # <h1 align="center"> ${data.title} </h1>
 <h3 align="center"> ${data.description} </h3>
 
-## Snapshot
-<img src="${data.imageSource}" alt="${data.title} image" />
-<img src="${data.gif}" alt="${data.title} image" />
+---
 
 <br/>
-<br/>
+
 
 ## Table of Contents
 ${data.badge}
-* [Features](#features)
-* [Tools](#tools)
+* [Technologies](#technologies)
 * [Installation](#installation) 
-* [Collaborators](#collaborators)
-* [Contact](#data.data.name)
+* [Collaborators](#contact)
+* [Contact](#contact)
 * [License](#license)
 
 <br/>
+
+---
+
+## Snapshot
+<img src="${data.imageSource}" alt="${data.title}" style="border-radius: 20px" />
+
 <br/>
 
-## Features
+<img src="${data.gif}" alt="${data.title}" style="border-radius: 20px" />
 
 <br/>
 <br/>
 
-## Tools Used
-${data.tools}
+---
+
+## Technologies
+${data.technologies}
 
 <br/>
 <br/>
@@ -51,6 +56,8 @@ ${data.installation}
 
 ***
 ## Contact
+### ${data.collaborators}
+## <img src="${data.data.avatar_url}" alt="avatar" style="border-radius: 20px" width="30" />  ${data.data.login}
 ### ${data.data.name}
 ### ${data.email}
 ***
